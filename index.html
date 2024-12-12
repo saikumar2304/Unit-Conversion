@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Units Calculator</h1>
+        <h2>Unit Converter using HTML CSS & JavaScript</h2>
+        <div class="converter">
+            <label for="category">Select Category</label>
+            <br>
+            <select id="category" onchange="updateFields()">
+                <option value="time">Time</option>
+                <option value="temperature">Temperature</option>
+                <option value="area">Area</option>
+                <option value="weight">Weight</option>
+                <option value="length">Length</option>
+            </select>
+            <div id="converter-fields">
+                <!-- Time converter fields -->
+                <div id="time-fields" class="field-group">
+                    <input type="number" id="time-value" placeholder="Enter value">
+                    <select id="time-from">
+                        <option value="second">Second</option>
+                        <option value="minute">Minute</option>
+                        <option value="hour">Hour</option>
+                        <option value="day">Day</option>
+                    </select>
+                    <span>to</span>
+                    <select id="time-to">
+                        <option value="second">Second</option>
+                        <option value="minute">Minute</option>
+                        <option value="hour">Hour</option>
+                        <option value="day">Day</option>
+                    </select>
+                    <button onclick="convertTime()">Convert</button>
+                    <div id="time-result">Result: </div>
+                </div>
+                <!-- Add fields for other categories here -->
+                <div id="temperature-fields" class="field-group" style="display: none;">
+                    <input type="number" id="temperature-value" placeholder="Enter value">
+                    <select id="temperature-from">
+                        <option value="celsius">Celsius</option>
+                        <option value="fahrenheit">Fahrenheit</option>
+                        <option value="kelvin">Kelvin</option>
+                    </select>
+                    <span>to</span>
+                    <select id="temperature-to">
+                        <option value="celsius">Celsius</option>
+                        <option value="fahrenheit">Fahrenheit</option>
+                        <option value="kelvin">Kelvin</option>
+                    </select>
+                    <button onclick="convertTemperature()">Convert</button>
+                    <div id="temperature-result">Result: </div>
+                </div>
+                <div id="area-fields" class="field-group" style="display: none;">
+                    <input type="number" id="area-value" placeholder="Enter value">
+                    <select id="area-from">
+                        <option value="square meter">Square Meter</option>
+                        <option value="square kilometer">Square Kilometer</option>
+                        <option value="square mile">Square Mile</option>
+                        <option value="acre">Acre</option>
+                    </select>
+                    <span>to</span>
+                    <select id="area-to">
+                        <option value="square meter">Square Meter</option>
+                        <option value="square kilometer">Square Kilometer</option>
+                        <option value="square mile">Square Mile</option>
+                        <option value="acre">Acre</option>
+                    </select>
+                    <button onclick="convertArea()">Convert</button>
+                    <div id="area-result">Result: </div>
+                </div>
+                <div id="weight-fields" class="field-group" style="display: none;">
+                    <input type="number" id="weight-value" placeholder="Enter value">
+                    <select id="weight-from">
+                        <option value="gram">Gram</option>
+                        <option value="kilogram">Kilogram</option>
+                        <option value="pound">Pound</option>
+                        <option value="ounce">Ounce</option>
+                    </select>
+                    <span>to</span>
+                    <select id="weight-to">
+                        <option value="gram">Gram</option>
+                        <option value="kilogram">Kilogram</option>
+                        <option value="pound">Pound</option>
+                        <option value="ounce">Ounce</option>
+                    </select>
+                    <button onclick="convertWeight()">Convert</button>
+                    <div id="weight-result">Result: </div>
+                </div>
+                <div id="length-fields" class="field-group" style="display: none;">
+                    <input type="number" id="length-value" placeholder="Enter value">
+                    <select id="length-from">
+                        <option value="meter">Meter</option>
+                        <option value="kilometer">Kilometer</option>
+                        <option value="mile">Mile</option>
+                        <option value="yard">Yard</option>
+                    </select>
+                    <span>to</span>
+                    <select id="length-to">
+                        <option value="meter">Meter</option>
+                        <option value="kilometer">Kilometer</option>
+                        <option value="mile">Mile</option>
+                        <option value="yard">Yard</option>
+                    </select>
+                    <button onclick="convertLength()">Convert</button>
+                    <div id="length-result">Result: </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
